@@ -1,0 +1,25 @@
+3dc16e935d3dfc34e383e99f7c98d57e
+"use strict";
+
+var _react = _interopRequireDefault(require("react"));
+
+var _reactDom = _interopRequireDefault(require("react-dom"));
+
+var _ = _interopRequireDefault(require("."));
+
+var _test = require("../../test.setup");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+describe('MyIcon', function () {
+  it('renders component without crashing', function () {
+    var div = document.createElement('div');
+
+    _reactDom["default"].render( /*#__PURE__*/_react["default"].createElement(_["default"], {
+      source: "source"
+    }), div);
+
+    expect(div).toEqual( /*#__PURE__*/_react["default"].createElement("p", null, "source")).toMatchSnapshot();
+  });
+});
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi5zcGVjLmpzIl0sIm5hbWVzIjpbImRlc2NyaWJlIiwiaXQiLCJkaXYiLCJkb2N1bWVudCIsImNyZWF0ZUVsZW1lbnQiLCJSZWFjdERPTSIsInJlbmRlciIsImV4cGVjdCIsInRvRXF1YWwiLCJ0b01hdGNoU25hcHNob3QiXSwibWFwcGluZ3MiOiI7O0FBQUE7O0FBQ0E7O0FBQ0E7O0FBQ0E7Ozs7QUFFQUEsUUFBUSxDQUFDLFFBQUQsRUFBVyxZQUFNO0FBQ3ZCQyxFQUFBQSxFQUFFLENBQUMsb0NBQUQsRUFBdUMsWUFBTTtBQUM3QyxRQUFNQyxHQUFHLEdBQUdDLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixLQUF2QixDQUFaOztBQUNBQyx5QkFBU0MsTUFBVCxlQUFnQixnQ0FBQyxZQUFEO0FBQVEsTUFBQSxNQUFNLEVBQUU7QUFBaEIsTUFBaEIsRUFBOENKLEdBQTlDOztBQUNBSyxJQUFBQSxNQUFNLENBQUNMLEdBQUQsQ0FBTixDQUFZTSxPQUFaLGVBQW9CLG9EQUFwQixFQUFtQ0MsZUFBbkM7QUFDRCxHQUpDLENBQUY7QUFNRCxDQVBPLENBQVIiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgUmVhY3QgZnJvbSAncmVhY3QnXG5pbXBvcnQgUmVhY3RET00gZnJvbSAncmVhY3QtZG9tJ1xuaW1wb3J0IE15SWNvbiBmcm9tICcuJztcbmltcG9ydCB7IHJlbmRlciwgcmVuZGVyZXIgfSBmcm9tICcuLi8uLi90ZXN0LnNldHVwJztcblxuZGVzY3JpYmUoJ015SWNvbicsICgpID0+IHtcbiAgaXQoJ3JlbmRlcnMgY29tcG9uZW50IHdpdGhvdXQgY3Jhc2hpbmcnLCAoKSA9PiB7XG4gICAgY29uc3QgZGl2ID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgnZGl2Jyk7XG4gICAgUmVhY3RET00ucmVuZGVyKDxNeUljb24gc291cmNlPXtcInNvdXJjZVwifSAvPiwgZGl2KTtcbiAgICBleHBlY3QoZGl2KS50b0VxdWFsKDxwPnNvdXJjZTwvcD4pLnRvTWF0Y2hTbmFwc2hvdCgpO1xuICB9KTtcblxufSk7Il19

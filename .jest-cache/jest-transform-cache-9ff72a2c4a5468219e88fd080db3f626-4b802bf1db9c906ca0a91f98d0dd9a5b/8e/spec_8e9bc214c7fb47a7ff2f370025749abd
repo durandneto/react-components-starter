@@ -1,0 +1,25 @@
+f80da3e1340def7abe12ba9cbfaf7311
+"use strict";
+
+var _react = _interopRequireDefault(require("react"));
+
+var _reactDom = _interopRequireDefault(require("react-dom"));
+
+var _ = _interopRequireDefault(require("."));
+
+var _test = require("../../test.setup");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+describe('MyIcon', function () {
+  it('renders component without crashing', function () {
+    var p = document.createElement('p');
+
+    _reactDom["default"].render( /*#__PURE__*/_react["default"].createElement(_["default"], {
+      source: "source"
+    }), p);
+
+    expect(p).toEqual( /*#__PURE__*/_react["default"].createElement("p", null, "source")).toMatchSnapshot();
+  });
+});
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi5zcGVjLmpzIl0sIm5hbWVzIjpbImRlc2NyaWJlIiwiaXQiLCJwIiwiZG9jdW1lbnQiLCJjcmVhdGVFbGVtZW50IiwiUmVhY3RET00iLCJyZW5kZXIiLCJleHBlY3QiLCJ0b0VxdWFsIiwidG9NYXRjaFNuYXBzaG90Il0sIm1hcHBpbmdzIjoiOztBQUFBOztBQUNBOztBQUNBOztBQUNBOzs7O0FBRUFBLFFBQVEsQ0FBQyxRQUFELEVBQVcsWUFBTTtBQUN2QkMsRUFBQUEsRUFBRSxDQUFDLG9DQUFELEVBQXVDLFlBQU07QUFDN0MsUUFBTUMsQ0FBQyxHQUFHQyxRQUFRLENBQUNDLGFBQVQsQ0FBdUIsR0FBdkIsQ0FBVjs7QUFDQUMseUJBQVNDLE1BQVQsZUFBZ0IsZ0NBQUMsWUFBRDtBQUFRLE1BQUEsTUFBTSxFQUFFO0FBQWhCLE1BQWhCLEVBQThDSixDQUE5Qzs7QUFDQUssSUFBQUEsTUFBTSxDQUFDTCxDQUFELENBQU4sQ0FBVU0sT0FBVixlQUFrQixvREFBbEIsRUFBaUNDLGVBQWpDO0FBQ0QsR0FKQyxDQUFGO0FBTUQsQ0FQTyxDQUFSIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFJlYWN0IGZyb20gJ3JlYWN0J1xuaW1wb3J0IFJlYWN0RE9NIGZyb20gJ3JlYWN0LWRvbSdcbmltcG9ydCBNeUljb24gZnJvbSAnLic7XG5pbXBvcnQgeyByZW5kZXIsIHJlbmRlcmVyIH0gZnJvbSAnLi4vLi4vdGVzdC5zZXR1cCc7XG5cbmRlc2NyaWJlKCdNeUljb24nLCAoKSA9PiB7XG4gIGl0KCdyZW5kZXJzIGNvbXBvbmVudCB3aXRob3V0IGNyYXNoaW5nJywgKCkgPT4ge1xuICAgIGNvbnN0IHAgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdwJyk7XG4gICAgUmVhY3RET00ucmVuZGVyKDxNeUljb24gc291cmNlPXtcInNvdXJjZVwifSAvPiwgcCk7XG4gICAgZXhwZWN0KHApLnRvRXF1YWwoPHA+c291cmNlPC9wPikudG9NYXRjaFNuYXBzaG90KCk7XG4gIH0pO1xuXG59KTsiXX0=
