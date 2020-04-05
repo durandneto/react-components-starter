@@ -1,4 +1,5 @@
-import PropTyes from 'prop-types'
+import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 const Container = styled.div`
@@ -9,6 +10,10 @@ const Container = styled.div`
     margin: 0 auto;
     flex-direction: column;
 
+    ${({ Theme }) => Theme && `
+        background-color: ${Theme.background};
+        color: ${Theme.foreground};
+    `}
 
     ${({ lg }) => lg && `
         width: 1280px;
@@ -49,15 +54,15 @@ const Container = styled.div`
 `
 
 export const propTypes = {
-    alignCenter: PropTyes.bool,
-    justifyCenter: PropTyes.bool,
-    justifyRight: PropTyes.bool,
-    lg: PropTyes.bool,
-    md: PropTyes.bool,
-    sm: PropTyes.bool,
-    xs: PropTyes.bool,
-    spaceAround: PropTyes.bool,
-    spaceBetween: PropTyes.bool,
+    alignCenter: PropTypes.bool,
+    justifyCenter: PropTypes.bool,
+    justifyRight: PropTypes.bool,
+    lg: PropTypes.bool,
+    md: PropTypes.bool,
+    sm: PropTypes.bool,
+    xs: PropTypes.bool,
+    spaceAround: PropTypes.bool,
+    spaceBetween: PropTypes.bool,
 }
 
 export const defaultProps = {
