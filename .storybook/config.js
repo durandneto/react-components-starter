@@ -13,7 +13,7 @@ const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
   @import url('https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap');
 
-  body {
+  body, html {
     padding: 0;
     margin: 0;
     -webkit-font-smoothing: antialiased;
