@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.jsx"],"names":["Container","props","children"],"mappings":";;;;;;;AAAA;;;;AAEA,IAAMA,SAAS,GAAG,SAAZA,SAAY,CAAAC,KAAK;AAAA,sBAAI,6CAAMA,KAAK,CAACC,QAAZ,CAAJ;AAAA,CAAvB;;eAEeF,S","sourcesContent":["import React from 'react'\n\nconst Container = props => <div>{props.children}</div>\n\nexport default Container"]}

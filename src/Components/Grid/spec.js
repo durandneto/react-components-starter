@@ -1,12 +1,12 @@
 import React from 'react'
-import Container from '.';
-import { render } from '../../test.setup';
-import renderer from 'react-test-renderer';
+import { render } from '../../../test.setup'
+import renderer from 'react-test-renderer'
 
+import Container from '.'
 
-describe('Containers', () => {
-  it('renders component without crashing', () => {
-    const tree = renderer.create(<Container >Teste</Container>).toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-});
+describe('Container', () => {
+    it('Rendering Container without crashing', () => {
+        const tree = renderer.create(<Container>Text 2</Container>).toJSON()
+        expect(tree).toMatchSnapshot()
+    })
+})
