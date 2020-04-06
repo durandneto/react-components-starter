@@ -2,7 +2,7 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import Container, { Row, Column} from '.'
 
-storiesOf('Grid', module)
+storiesOf('Grid|Flexbox', module)
 
 .add('Default', () => (
   <Container>

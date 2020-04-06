@@ -16,9 +16,8 @@ const GlobalStyle = createGlobalStyle`
   body, html {
     padding: 0;
     margin: 0;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: antialiased;
-    font-smoothing: antialiased
+    font-smoothing: antialiased;
+    font-face: "Roboto";
   }
 `;
 
