@@ -1,10 +1,9 @@
-import React from 'react'
-import renderer from 'react-test-renderer'
-import Text from '.'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import VHTitle from '.';
 
-describe('Text', () => {
-    it('Rendering Text without crashing', () => {
-        const tree = renderer.create(<Text variant={"h1"} text="Text Font" />).toJSON()
-        expect(tree).toMatchSnapshot()
-    })
-})
+it('renders button without crashing', () => {
+  const div = document.createElement('div');
+  ReactDOM.render(<VHTitle h1 label="H1 - Roboto med 36/48" />, div);
+  ReactDOM.unmountComponentAtNode(div);
+});
