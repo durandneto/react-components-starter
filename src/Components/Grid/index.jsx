@@ -83,6 +83,11 @@ export const Row = styled(Container)`
 export const Column = styled(Container)`
     margin: initial;
 `
+Row.propTypes =  Container.propTypes;
+Row.defaultProps =  Container.defaultProps;
+
+Column.propTypes =  Container.propTypes;
+Column.defaultProps =  Container.defaultProps;
 
 
 export default Container
