@@ -1,16 +1,3 @@
-//https://material.io/resources/color/#!/?view.left=0&view.right=0&primary.color=00adff
-/**
-var palets = document.querySelectorAll('li.color')
-var Colors = []
-for( var index in palets) {
-​
-if(palets[index].getAttribute('aria-label')){
-Colors[palets[index].getAttribute('aria-label')] = palets[index].getAttribute('value')
-}
-}
-
-
-*/
 export default {
     "Red-50": "#FFEBEE",
     "Red-100": "#FFCDD2",
