@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import Color from '../../Colors'
 
-export const Body = styled.p`
+export const Body = styled.span`
   margin: 0;
   padding: 0;
   font-weight: 400;
