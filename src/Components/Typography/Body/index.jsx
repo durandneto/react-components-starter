@@ -10,6 +10,7 @@ const Body = props => {
       lg={props.lg}
       md={props.md}
       reverse={props.reverse}
+      color={props.color}
       className={` ${props.className ? props.className : ''}`}
     >
       {props.label}
@@ -24,6 +25,7 @@ Body.defaultProps = {
   sm: true,
   md: false,
   lg: false,
+  color: "Blue-Grey-900",
 }
 
 Body.propTypes = {
@@ -33,6 +35,7 @@ Body.propTypes = {
   md: PropTypes.bool,
   lg: PropTypes.bool,
   className: PropTypes.string,
+  color: PropTypes.string,
   label: PropTypes.string.isRequired,
 }
 

@@ -1,10 +1,11 @@
 import styled from 'styled-components'
+import Color from '../../Colors'
 
 export const Body = styled.p`
   margin: 0;
   padding: 0;
   font-weight: 400;
-
+  color: ${props => Color[props.color]};
 
   ${({ sm }) => sm && `
     font-size: 14px;
