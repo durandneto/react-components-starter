@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Color from '../../Colors'
 
 export const H1 = styled.h1`
   font-size: 36px;
@@ -7,10 +8,7 @@ export const H1 = styled.h1`
   height: 48px;
   margin: 0;
   padding: 0;
-
-  ${({ reverse }) => reverse && `
-    color: #fff;
-  `}
+  color: ${props => Color[props.color]};
 `
 
 export const H2 = styled.h2`
@@ -20,10 +18,7 @@ export const H2 = styled.h2`
   height: 40px;
   margin: 0;
   padding: 0;
-
-  ${({ reverse }) => reverse && `
-    color: #fff;
-  `}
+  color: ${props => Color[props.color]};
 `
 
 export const H3 = styled.h3`
@@ -33,10 +28,7 @@ export const H3 = styled.h3`
   height: 36px;
   margin: 0;
   padding: 0;
-
-  ${({ reverse }) => reverse && `
-    color: #fff;
-  `}
+  color: ${props => Color[props.color]};
 `
 
 export const H4 = styled.h4`
@@ -46,10 +38,7 @@ export const H4 = styled.h4`
   height: 32px;
   margin: 0;
   padding: 0;
-
-  ${({ reverse }) => reverse && `
-    color: #fff;
-  `}
+  color: ${props => Color[props.color]};
 `
 
 export const H5 = styled.h5`
@@ -59,10 +48,7 @@ export const H5 = styled.h5`
   height: 24px;
   margin: 0;
   padding: 0;
-
-  ${({ reverse }) => reverse && `
-    color: #fff;
-  `}
+  color: ${props => Color[props.color]};
 `
 
 export const H6 = styled.h6`
@@ -72,10 +58,7 @@ export const H6 = styled.h6`
   height: 20px;
   margin: 0;
   padding: 0;
-
-  ${({ reverse }) => reverse && `
-    color: #fff;
-  `}
+  color: ${props => Color[props.color]};
 `
 
 export default H1

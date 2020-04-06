@@ -25,7 +25,7 @@ Body.defaultProps = {
   sm: true,
   md: false,
   lg: false,
-  color: "Blue-Grey-900",
+  color: "Blue-Grey-800",
 }
 
 Body.propTypes = {
