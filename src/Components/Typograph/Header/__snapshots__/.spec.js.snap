@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Typograph Rendering Font Components without crashing 1`] = `
+.c0 {
+  margin: 0;
+  padding: 0;
+  color: #1A237E;
+}
+
+<h1
+  className="c0"
+  color="Indigo-900"
+  label="Header component Indigo-900"
+>
+  Header component Indigo-900
+</h1>
+`;

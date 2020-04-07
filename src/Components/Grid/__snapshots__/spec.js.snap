@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Container Rendering Container without crashing 1`] = `
-<div>
-  Text 2
-</div>
-`;

@@ -1,0 +1,25 @@
+beae8ea31920aaa9106d6a0d5dcb81f3
+"use strict";
+
+var _react = _interopRequireDefault(require("react"));
+
+var _test = require("../../../test.setup");
+
+var _reactTestRenderer = _interopRequireDefault(require("react-test-renderer"));
+
+var _ = _interopRequireDefault(require("."));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+describe('Typograph', function () {
+  it('Rendering Font Components without crashing', function () {
+    var tree = _reactTestRenderer["default"].create( /*#__PURE__*/_react["default"].createElement(_["default"], {
+      color: "Indigo-900",
+      lg: true,
+      label: "Body component Indigo-900"
+    })).toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
+});
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNwZWMuanMiXSwibmFtZXMiOlsiZGVzY3JpYmUiLCJpdCIsInRyZWUiLCJyZW5kZXJlciIsImNyZWF0ZSIsInRvSlNPTiIsImV4cGVjdCIsInRvTWF0Y2hTbmFwc2hvdCJdLCJtYXBwaW5ncyI6Ijs7QUFBQTs7QUFDQTs7QUFDQTs7QUFFQTs7OztBQUVBQSxRQUFRLENBQUMsV0FBRCxFQUFjLFlBQU07QUFDeEJDLEVBQUFBLEVBQUUsQ0FBQyw0Q0FBRCxFQUErQyxZQUFNO0FBQ25ELFFBQU1DLElBQUksR0FBR0MsOEJBQVNDLE1BQVQsZUFDVCxnQ0FBQyxZQUFEO0FBQ0ksTUFBQSxLQUFLLEVBQUUsWUFEWDtBQUVJLE1BQUEsRUFBRSxNQUZOO0FBR0ksTUFBQSxLQUFLLEVBQUU7QUFIWCxNQURTLEVBS0xDLE1BTEssRUFBYjs7QUFNQUMsSUFBQUEsTUFBTSxDQUFDSixJQUFELENBQU4sQ0FBYUssZUFBYjtBQUNILEdBUkMsQ0FBRjtBQVNILENBVk8sQ0FBUiIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCBmcm9tICdyZWFjdCdcbmltcG9ydCB7IHJlbmRlciB9IGZyb20gJy4uLy4uLy4uL3Rlc3Quc2V0dXAnXG5pbXBvcnQgcmVuZGVyZXIgZnJvbSAncmVhY3QtdGVzdC1yZW5kZXJlcidcblxuaW1wb3J0IEJvZHkgZnJvbSAnLidcblxuZGVzY3JpYmUoJ1R5cG9ncmFwaCcsICgpID0+IHtcbiAgICBpdCgnUmVuZGVyaW5nIEZvbnQgQ29tcG9uZW50cyB3aXRob3V0IGNyYXNoaW5nJywgKCkgPT4ge1xuICAgICAgICBjb25zdCB0cmVlID0gcmVuZGVyZXIuY3JlYXRlKFxuICAgICAgICAgICAgPEJvZHlcbiAgICAgICAgICAgICAgICBjb2xvcj17XCJJbmRpZ28tOTAwXCJ9XG4gICAgICAgICAgICAgICAgbGdcbiAgICAgICAgICAgICAgICBsYWJlbD17XCJCb2R5IGNvbXBvbmVudCBJbmRpZ28tOTAwXCJ9XG4gICAgICAgICAgICAvPikudG9KU09OKClcbiAgICAgICAgZXhwZWN0KHRyZWUpLnRvTWF0Y2hTbmFwc2hvdCgpXG4gICAgfSlcbn0pIl19
