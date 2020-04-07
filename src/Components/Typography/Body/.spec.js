@@ -1,15 +1,15 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 
-import Header from '.'
+import Body from '.'
 
-describe('Typograph', () => {
+describe('Typography', () => {
     it('Rendering Font Components without crashing', () => {
         const tree = renderer.create(
-            <Header
+            <Body
                 color={"Indigo-900"}
-                h1
-                label={"Header component Indigo-900"}
+                lg
+                label={"Body component Indigo-900"}
             />).toJSON()
         expect(tree).toMatchSnapshot()
     })

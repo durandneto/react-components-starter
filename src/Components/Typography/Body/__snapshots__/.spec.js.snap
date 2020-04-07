@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Typograph Rendering Font Components without crashing 1`] = `
+exports[`Typography Rendering Font Components without crashing 1`] = `
 .c0 {
   font-size: 14px;
   line-height: 18px;
