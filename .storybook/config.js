@@ -15,8 +15,7 @@ const GlobalStyle = createGlobalStyle`
   body, html {
     padding: 0;
     margin: 0;
-    font-smoothing: antialiased;
-    font-face: "Roboto";
+    font-family: "Roboto";
   }
 `;
 

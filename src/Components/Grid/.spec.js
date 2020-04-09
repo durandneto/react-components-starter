@@ -1,5 +1,4 @@
 import React from 'react'
-import { render } from '../../../test.setup'
 import renderer from 'react-test-renderer'
 
 import Container from '.'

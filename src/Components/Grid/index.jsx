@@ -1,10 +1,12 @@
+import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
-const Container = styled.div`
+const StyledContainer = styled.div`
     display: flex;
     flex-direction: column;
     max-width: 100%;
+    width: 100%;
     margin: 0 auto;
     padding: 0;
 
@@ -49,6 +51,8 @@ const Container = styled.div`
     `}
 `
 
+const Container = props => <StyledContainer {...props}>{props.children}</StyledContainer>
+
 Container.propTypes = {
     alignCenter: PropTypes.bool,
     justifyCenter: PropTypes.bool,
@@ -75,19 +79,28 @@ Container.defaultProps = {
     xs: false,
 }
 
-export const Row = styled(Container)`
+const StyledRow = styled(StyledContainer)`
     flex-direction: row;
     margin: initial;
+    width: 100%;
 `
 
-export const Column = styled(Container)`
+const StyledColumn = styled(StyledContainer)`
     margin: initial;
+    padding: 1%;
+    width: fit-content;
+    ${({ fullSize }) => fullSize && `
+        width: 100%;
+    `}
 `
+
+export const Column = props => <StyledColumn {...props}>{props.children}</StyledColumn>
+export const Row = props => <StyledRow {...props}>{props.children}</StyledRow>
+
 Row.propTypes =  Container.propTypes;
 Row.defaultProps =  Container.defaultProps;
 
 Column.propTypes =  Container.propTypes;
 Column.defaultProps =  Container.defaultProps;
-
 
 export default Container
