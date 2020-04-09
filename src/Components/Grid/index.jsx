@@ -89,7 +89,7 @@ const StyledColumn = styled(StyledContainer)`
     margin: initial;
     padding: 1%;
     width: fit-content;
-    ${({ fullSize }) => fullSize && `
+    ${({ full }) => full && `
         width: 100%;
     `}
 `

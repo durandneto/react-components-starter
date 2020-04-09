@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.jsx"],"names":["Button","props","label"],"mappings":";;;;;;;AAAA;;;;AAEA,IAAMA,MAAM,GAAG,SAATA,MAAS,CAAAC,KAAK;AAAA,sBAAI,oCAASA,KAAK,CAACC,KAAf,CAAJ;AAAA,CAApB;;eAEeF,M","sourcesContent":["import react from 'react'\n\nconst Button = props => <button>{props.label}</button>\n\nexport default Button"]}

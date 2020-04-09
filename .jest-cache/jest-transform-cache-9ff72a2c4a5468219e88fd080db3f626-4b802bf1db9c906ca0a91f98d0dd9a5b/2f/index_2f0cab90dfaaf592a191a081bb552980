@@ -1,0 +1,21 @@
+ed0202b0b1630200df33a654a5657bd9
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _styles = _interopRequireDefault(require("./styles"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+var Button = function Button(props) {
+  return /*#__PURE__*/_react["default"].createElement(_styles["default"], null, props.label);
+};
+
+var _default = Button;
+exports["default"] = _default;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImluZGV4LmpzeCJdLCJuYW1lcyI6WyJCdXR0b24iLCJwcm9wcyIsImxhYmVsIl0sIm1hcHBpbmdzIjoiOzs7Ozs7O0FBQUE7O0FBQ0E7Ozs7QUFFQSxJQUFNQSxNQUFNLEdBQUcsU0FBVEEsTUFBUyxDQUFBQyxLQUFLO0FBQUEsc0JBQUksZ0NBQUMsa0JBQUQsUUFBZUEsS0FBSyxDQUFDQyxLQUFyQixDQUFKO0FBQUEsQ0FBcEI7O2VBRWVGLE0iLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgUmVhY3QgZnJvbSAncmVhY3QnXG5pbXBvcnQgU3R5bGVkQnV0dG9uIGZyb20gJy4vc3R5bGVzJ1xuXG5jb25zdCBCdXR0b24gPSBwcm9wcyA9PiA8U3R5bGVkQnV0dG9uPntwcm9wcy5sYWJlbH08L1N0eWxlZEJ1dHRvbj5cblxuZXhwb3J0IGRlZmF1bHQgQnV0dG9uIl19

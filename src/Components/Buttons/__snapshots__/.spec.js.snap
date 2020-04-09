@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button Rendering Button without crashing 1`] = `
+<button
+  className=""
+>
+  Test Button
+</button>
+`;
