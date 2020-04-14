@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react'
 import Header from '.'
 import Body from '../Body'
 
-storiesOf('Typography/Headers', module)
+storiesOf('Typography|Headers', module)
 
 .add('Header e Body', () => (
   <>

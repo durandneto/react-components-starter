@@ -33,7 +33,8 @@ Button.propTypes = {
     primary: PropTypes.bool,
     danger: PropTypes.bool,
     secondary: PropTypes.bool,
-    data: PropTypes.object
+    data: PropTypes.object,
+    onEvent: PropTypes.func.isRequired
 }
 
 Button.defaultProps = {

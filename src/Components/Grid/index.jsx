@@ -83,14 +83,20 @@ const StyledRow = styled(StyledContainer)`
     flex-direction: row;
     margin: initial;
     width: 100%;
+    position: relative;
 `
 
 const StyledColumn = styled(StyledContainer)`
     margin: initial;
-    padding: 1%;
+    padding: 6px;
     width: fit-content;
+    position: relative;
     ${({ full }) => full && `
         width: 100%;
+    `}
+
+    ${({ noPadding }) => noPadding && `
+        padding: 6px 0px;
     `}
 `
 
