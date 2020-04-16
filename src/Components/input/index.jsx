@@ -1,104 +1,104 @@
-import React, {useState} from 'react'
+import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
-import Container, { Row, Column } from '../Grid'
 import
-
-  StyledInput, {
+  StyledInput,
+  {
     StyledIconLoading,
     StyledIconError,
-    StyledErrorMessage,
-  } from "./styles"
+    StyledErrorMessage
+  }
+from './styles'
 
 const Input = props => {
-  const [value, handleChange] = React.useState(props.value);
-  const [inputValid, setInputInvalid] = React.useState(true);
+  const [value, handleChange] = useState(props.value);
+  const [inputValid, setInputInvalid] = useState(true);
+
+  useEffect(() =>{
+    if ( props.test && value ) {
+      setInputInvalid(value.match(props.test))
+    }
+  }, [props.value])
 
   return (
-    <Container>
-      <Row>
-        <Column noPadding full>
-          <StyledInput
-            id={props.id}
-            type={props.type}
-            placeholder={props.placeholder}
-            disabled={props.disabled || props.loading}
-            error={props.error || !inputValid}
-            loading={props.loading}
-            success={props.success}
-            autoFocus={props.autoFocus}
-            value={value}
-            onChange={e => {
-              handleChange(e.currentTarget.value)
+    <>
+      <StyledInput
+        id={props.id}
+        type={props.type}
+        placeholder={props.placeholder}
+        success={props.success}
+        error={props.error || !inputValid}
+        disabled={props.disabled || props.loading}
+        loading={props.loading}
+        autoFocus={props.autoFocus}
+        value={value}
+        onChange={e => {
+          handleChange(e.currentTarget.value)
+          if (!e.currentTarget.value) {
+            setInputInvalid(true)
+          } else if (props.test) {
+            setInputInvalid(e.currentTarget.value.match(props.test))
+          }
+        }}
+        onBlur={e => {
+          inputValid && props.onEvent({
+            data: {
+              value,
+              data: props.data
+            },
+            event: "onBlur",
+            origin: "Input"
+          })
+        }}
 
-              if (e.currentTarget.value) {
-                setInputInvalid(e.currentTarget.value.match(props.test))
-              } else {
-                setInputInvalid(true)
-              }
-            }}
-            onKeyUp={e => {
-              if (e.key === "Enter") {
-                inputValid && props.onEvent({
-                  data: {
-                    value,
-                    data: props.data
-                  },
-                  event: "onKeyUpAction",
-                  origin: "Input"
-                })
-              } else {
-                handleChange(e.currentTarget.value)
-                inputValid && props.onEvent({
-                    data: {
-                      value: e.currentTarget.value,
-                      data: props.data
-                    },
-                    event: "onKeyUp",
-                    origin: "Input"
-                  })
-                }
+        onFocus={e => {
+          inputValid && props.onEvent({
+            data: {
+              value,
+              data: props.data
+            },
+            event: "onFocus",
+            origin: "Input"
+          })
+        }}
 
-            }}
-
-            onFocus={() => {
-              inputValid && props.onEvent({
+        onKeyUp={e => {
+          if (e.key === "Enter") {
+            inputValid && props.onEvent({
+              data: {
+                value,
+                data: props.data
+              },
+              event: "onKeyUpAction",
+              origin: "Input"
+            })
+          } else {
+            handleChange(e.currentTarget.value)
+            inputValid && props.onEvent({
                 data: {
-                  value,
+                  value: e.currentTarget.value,
                   data: props.data
                 },
-                event: "onFocus",
+                event: "onKeyUp",
                 origin: "Input"
               })
-            }}
-
-            onBlur={() => {
-              inputValid && props.onEvent({
-                data: {
-                  value,
-                  key: props.data
-                },
-                event: "onBlur",
-                origin: "Input"
-              })
-            }}
-          />
-          {
-            props.loading && <StyledIconLoading />
-          }
-          {
-            (props.error || !inputValid) &&
-            <>
-              <StyledIconError />
-              <StyledErrorMessage>
-                {
-                  !inputValid ? props.testMessage : props.error
-                }
-              </StyledErrorMessage>
-            </>
-          }
-        </Column>
-      </Row>
-    </Container>
+            }
+        }}
+    />
+    {
+      props.loading && <StyledIconLoading />
+    }
+    {
+      (props.error || !inputValid)  &&
+        <>
+          <StyledIconError />
+          <StyledErrorMessage>
+            {
+              !inputValid ? props.testMessage :  props.error
+            }
+          </StyledErrorMessage>
+        </>
+    }
+  </>
   )
 }
 

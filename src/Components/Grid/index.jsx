@@ -84,6 +84,23 @@ const StyledRow = styled(StyledContainer)`
     margin: initial;
     width: 100%;
     position: relative;
+    ${({ margin }) => margin && `
+        margin: 6px 0;
+    `}
+
+    ${({ column }) => column && `
+        flex-direction: column;
+    `}
+
+    ${({ autoColumn }) => autoColumn && `
+        @media only screen and (max-width: 768px) {
+            flex-direction: column;
+        }
+    `}
+
+    ${({ fitContent }) => fitContent && `
+        width: fit-content;
+    `}
 `
 
 const StyledColumn = styled(StyledContainer)`

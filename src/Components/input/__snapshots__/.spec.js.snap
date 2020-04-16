@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input Rendering Input without crashing 1`] = `
+.c0 {
+  position: relative;
+  border: 1px solid #CFD8DC;
+  border-radius: 6px;
+  color: #607D8B;
+  font-size: 14px;
+  padding: 9px 12px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.c0::-webkit-input-placeholder {
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.53;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #CFD8DC;
+}
+
+.c0::-moz-placeholder {
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.53;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #CFD8DC;
+}
+
+.c0:-ms-input-placeholder {
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.53;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #CFD8DC;
+}
+
+.c0::placeholder {
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.53;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #CFD8DC;
+}
+
+<input
+  className="c0"
+  disabled={false}
+  loading={false}
+  onBlur={[Function]}
+  onChange={[Function]}
+  onFocus={[Function]}
+  onKeyUp={[Function]}
+  placeholder=""
+  type="text"
+  value="Test Input"
+/>
+`;

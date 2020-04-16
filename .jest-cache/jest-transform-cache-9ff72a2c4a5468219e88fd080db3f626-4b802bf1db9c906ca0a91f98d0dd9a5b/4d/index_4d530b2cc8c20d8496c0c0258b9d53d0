@@ -1,0 +1,64 @@
+e9ee7b9fa1194e2e5b40e65b8c61c5dc
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _styles = _interopRequireDefault(require("./styles"));
+
+var _propTypes = _interopRequireDefault(require("prop-types"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+var Button = function Button(props) {
+  return /*#__PURE__*/_react["default"].createElement(_styles["default"], _extends({}, props, {
+    disabled: props.disabled || props.loading,
+    onClick: function onClick(e) {
+      props.onEvent({
+        type: 'onClick',
+        origin: 'Button',
+        data: props.data
+      });
+    }
+  }), props.loading && props.loadingLabel ? props.loadingLabel : props.label);
+};
+
+Button.propTypes = {
+  disabled: _propTypes["default"].bool,
+  loading: _propTypes["default"].bool,
+  label: _propTypes["default"].string.isRequired,
+  loadingLabel: _propTypes["default"].string,
+  xs: _propTypes["default"].bool,
+  sm: _propTypes["default"].bool,
+  md: _propTypes["default"].bool,
+  lg: _propTypes["default"].bool,
+  success: _propTypes["default"].bool,
+  primary: _propTypes["default"].bool,
+  danger: _propTypes["default"].bool,
+  secondary: _propTypes["default"].bool,
+  data: _propTypes["default"].object,
+  onEvent: _propTypes["default"].func.isRequired
+};
+Button.defaultProps = {
+  disabled: false,
+  loading: false,
+  loadingLabel: null,
+  xs: false,
+  sm: false,
+  md: false,
+  lg: false,
+  success: false,
+  primary: false,
+  danger: false,
+  secondary: false,
+  data: {}
+};
+var _default = Button;
+exports["default"] = _default;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImluZGV4LmpzeCJdLCJuYW1lcyI6WyJCdXR0b24iLCJwcm9wcyIsImRpc2FibGVkIiwibG9hZGluZyIsImUiLCJvbkV2ZW50IiwidHlwZSIsIm9yaWdpbiIsImRhdGEiLCJsb2FkaW5nTGFiZWwiLCJsYWJlbCIsInByb3BUeXBlcyIsIlByb3BUeXBlcyIsImJvb2wiLCJzdHJpbmciLCJpc1JlcXVpcmVkIiwieHMiLCJzbSIsIm1kIiwibGciLCJzdWNjZXNzIiwicHJpbWFyeSIsImRhbmdlciIsInNlY29uZGFyeSIsIm9iamVjdCIsImZ1bmMiLCJkZWZhdWx0UHJvcHMiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7QUFBQTs7QUFDQTs7QUFDQTs7Ozs7O0FBRUEsSUFBTUEsTUFBTSxHQUFHLFNBQVRBLE1BQVMsQ0FBQUMsS0FBSztBQUFBLHNCQUNoQixnQ0FBQyxrQkFBRCxlQUNRQSxLQURSO0FBRUksSUFBQSxRQUFRLEVBQUdBLEtBQUssQ0FBQ0MsUUFBTixJQUFrQkQsS0FBSyxDQUFDRSxPQUZ2QztBQUdJLElBQUEsT0FBTyxFQUFHLGlCQUFBQyxDQUFDLEVBQUk7QUFDWEgsTUFBQUEsS0FBSyxDQUFDSSxPQUFOLENBQWM7QUFDVkMsUUFBQUEsSUFBSSxFQUFFLFNBREk7QUFFVkMsUUFBQUEsTUFBTSxFQUFFLFFBRkU7QUFHVkMsUUFBQUEsSUFBSSxFQUFFUCxLQUFLLENBQUNPO0FBSEYsT0FBZDtBQUtIO0FBVEwsTUFZUVAsS0FBSyxDQUFDRSxPQUFOLElBQWlCRixLQUFLLENBQUNRLFlBQXZCLEdBQXNDUixLQUFLLENBQUNRLFlBQTVDLEdBQTJEUixLQUFLLENBQUNTLEtBWnpFLENBRGdCO0FBQUEsQ0FBcEI7O0FBa0JBVixNQUFNLENBQUNXLFNBQVAsR0FBbUI7QUFDZlQsRUFBQUEsUUFBUSxFQUFFVSxzQkFBVUMsSUFETDtBQUVmVixFQUFBQSxPQUFPLEVBQUVTLHNCQUFVQyxJQUZKO0FBR2ZILEVBQUFBLEtBQUssRUFBRUUsc0JBQVVFLE1BQVYsQ0FBaUJDLFVBSFQ7QUFJZk4sRUFBQUEsWUFBWSxFQUFFRyxzQkFBVUUsTUFKVDtBQUtmRSxFQUFBQSxFQUFFLEVBQUVKLHNCQUFVQyxJQUxDO0FBTWZJLEVBQUFBLEVBQUUsRUFBRUwsc0JBQVVDLElBTkM7QUFPZkssRUFBQUEsRUFBRSxFQUFFTixzQkFBVUMsSUFQQztBQVFmTSxFQUFBQSxFQUFFLEVBQUVQLHNCQUFVQyxJQVJDO0FBU2ZPLEVBQUFBLE9BQU8sRUFBRVIsc0JBQVVDLElBVEo7QUFVZlEsRUFBQUEsT0FBTyxFQUFFVCxzQkFBVUMsSUFWSjtBQVdmUyxFQUFBQSxNQUFNLEVBQUVWLHNCQUFVQyxJQVhIO0FBWWZVLEVBQUFBLFNBQVMsRUFBRVgsc0JBQVVDLElBWk47QUFhZkwsRUFBQUEsSUFBSSxFQUFFSSxzQkFBVVksTUFiRDtBQWNmbkIsRUFBQUEsT0FBTyxFQUFFTyxzQkFBVWEsSUFBVixDQUFlVjtBQWRULENBQW5CO0FBaUJBZixNQUFNLENBQUMwQixZQUFQLEdBQXNCO0FBQ2xCeEIsRUFBQUEsUUFBUSxFQUFFLEtBRFE7QUFFbEJDLEVBQUFBLE9BQU8sRUFBRSxLQUZTO0FBR2xCTSxFQUFBQSxZQUFZLEVBQUUsSUFISTtBQUlsQk8sRUFBQUEsRUFBRSxFQUFFLEtBSmM7QUFLbEJDLEVBQUFBLEVBQUUsRUFBRSxLQUxjO0FBTWxCQyxFQUFBQSxFQUFFLEVBQUUsS0FOYztBQU9sQkMsRUFBQUEsRUFBRSxFQUFFLEtBUGM7QUFRbEJDLEVBQUFBLE9BQU8sRUFBRSxLQVJTO0FBU2xCQyxFQUFBQSxPQUFPLEVBQUUsS0FUUztBQVVsQkMsRUFBQUEsTUFBTSxFQUFFLEtBVlU7QUFXbEJDLEVBQUFBLFNBQVMsRUFBRSxLQVhPO0FBWWxCZixFQUFBQSxJQUFJLEVBQUU7QUFaWSxDQUF0QjtlQWVlUixNIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFJlYWN0IGZyb20gJ3JlYWN0J1xuaW1wb3J0IFN0eWxlZEJ1dHRvbiBmcm9tICcuL3N0eWxlcydcbmltcG9ydCBQcm9wVHlwZXMgZnJvbSAncHJvcC10eXBlcydcblxuY29uc3QgQnV0dG9uID0gcHJvcHMgPT4gKFxuICAgIDxTdHlsZWRCdXR0b25cbiAgICAgICAgey4uLnByb3BzfVxuICAgICAgICBkaXNhYmxlZD17KHByb3BzLmRpc2FibGVkIHx8IHByb3BzLmxvYWRpbmcpfVxuICAgICAgICBvbkNsaWNrPXsgZSA9PiB7XG4gICAgICAgICAgICBwcm9wcy5vbkV2ZW50KHtcbiAgICAgICAgICAgICAgICB0eXBlOiAnb25DbGljaycsXG4gICAgICAgICAgICAgICAgb3JpZ2luOiAnQnV0dG9uJyxcbiAgICAgICAgICAgICAgICBkYXRhOiBwcm9wcy5kYXRhXG4gICAgICAgICAgICB9KVxuICAgICAgICB9fVxuICAgID5cbiAgICAgICAge1xuICAgICAgICAgICAgcHJvcHMubG9hZGluZyAmJiBwcm9wcy5sb2FkaW5nTGFiZWwgPyBwcm9wcy5sb2FkaW5nTGFiZWwgOiBwcm9wcy5sYWJlbFxuICAgICAgICB9XG4gICAgPC9TdHlsZWRCdXR0b24+XG4pXG5cbkJ1dHRvbi5wcm9wVHlwZXMgPSB7XG4gICAgZGlzYWJsZWQ6IFByb3BUeXBlcy5ib29sLFxuICAgIGxvYWRpbmc6IFByb3BUeXBlcy5ib29sLFxuICAgIGxhYmVsOiBQcm9wVHlwZXMuc3RyaW5nLmlzUmVxdWlyZWQsXG4gICAgbG9hZGluZ0xhYmVsOiBQcm9wVHlwZXMuc3RyaW5nLFxuICAgIHhzOiBQcm9wVHlwZXMuYm9vbCxcbiAgICBzbTogUHJvcFR5cGVzLmJvb2wsXG4gICAgbWQ6IFByb3BUeXBlcy5ib29sLFxuICAgIGxnOiBQcm9wVHlwZXMuYm9vbCxcbiAgICBzdWNjZXNzOiBQcm9wVHlwZXMuYm9vbCxcbiAgICBwcmltYXJ5OiBQcm9wVHlwZXMuYm9vbCxcbiAgICBkYW5nZXI6IFByb3BUeXBlcy5ib29sLFxuICAgIHNlY29uZGFyeTogUHJvcFR5cGVzLmJvb2wsXG4gICAgZGF0YTogUHJvcFR5cGVzLm9iamVjdCxcbiAgICBvbkV2ZW50OiBQcm9wVHlwZXMuZnVuYy5pc1JlcXVpcmVkXG59XG5cbkJ1dHRvbi5kZWZhdWx0UHJvcHMgPSB7XG4gICAgZGlzYWJsZWQ6IGZhbHNlLFxuICAgIGxvYWRpbmc6IGZhbHNlLFxuICAgIGxvYWRpbmdMYWJlbDogbnVsbCxcbiAgICB4czogZmFsc2UsXG4gICAgc206IGZhbHNlLFxuICAgIG1kOiBmYWxzZSxcbiAgICBsZzogZmFsc2UsXG4gICAgc3VjY2VzczogZmFsc2UsXG4gICAgcHJpbWFyeTogZmFsc2UsXG4gICAgZGFuZ2VyOiBmYWxzZSxcbiAgICBzZWNvbmRhcnk6IGZhbHNlLFxuICAgIGRhdGE6IHt9XG59XG5cbmV4cG9ydCBkZWZhdWx0IEJ1dHRvbiJdfQ==
