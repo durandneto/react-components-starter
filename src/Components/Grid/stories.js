@@ -1,6 +1,11 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import Container, { Row, Column} from '.'
+import Input from '../input'
+import RadioButton from '../RadioButton'
+import Checkbox from '../Checkbox'
+import Header from '../Typography/Header'
+import Button from '../Button'
 
 storiesOf('Grid|Flexbox', module)
 
@@ -90,5 +95,19 @@ storiesOf('Grid|Flexbox', module)
   <Container xs>
     <Row>Linha 1</Row>
     <Row>Linha 2</Row>
+  </Container>
+))
+
+
+.add('Media Query', () => (
+  <Container>
+    <Row>
+      <Column>
+      <Header
+        color="Blue-Grey-700"
+        label="Fomulário Responsivo"
+      />
+      </Column>
+    </Row>
   </Container>
 ))

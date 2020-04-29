@@ -20,7 +20,7 @@ const Input = props => {
   }, [props.value])
 
   return (
-    <>
+    <React.Fragment>
       <StyledInput
         id={props.id}
         type={props.type}
@@ -89,16 +89,16 @@ const Input = props => {
     }
     {
       (props.error || !inputValid)  &&
-        <>
+        <React.Fragment>
           <StyledIconError />
           <StyledErrorMessage>
             {
               !inputValid ? props.testMessage :  props.error
             }
           </StyledErrorMessage>
-        </>
+        </React.Fragment>
     }
-  </>
+  </React.Fragment>
   )
 }
 

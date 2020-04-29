@@ -39,5 +39,7 @@
     "react-test-renderer": "^16.13.1",
     "styled-components": "^5.0.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "ws": "^7.2.3"
+  }
 }

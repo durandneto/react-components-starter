@@ -1,0 +1,17 @@
+aaee6370f58d2dc57d526c3f598f6547
+// import React from 'react'
+// import renderer from 'react-test-renderer'
+// import Checkbox from '.'
+// describe('Checkbox', () => {
+//   it ('Rendering Checkbox without crashing', () => {
+//     const result = renderer.create(
+//       <Checkbox
+//         value={"Test Checkbox"}
+//         onEvent={e => {}}
+//       />
+//     ).toJSON()
+//     expect(result).toMatchSnapshot()
+//   })
+// })
+"use strict";
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi5zcGVjLmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0FBQ0E7QUFDQTtBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIvLyBpbXBvcnQgUmVhY3QgZnJvbSAncmVhY3QnXG4vLyBpbXBvcnQgcmVuZGVyZXIgZnJvbSAncmVhY3QtdGVzdC1yZW5kZXJlcidcbi8vIGltcG9ydCBDaGVja2JveCBmcm9tICcuJ1xuXG4vLyBkZXNjcmliZSgnQ2hlY2tib3gnLCAoKSA9PiB7XG4vLyAgIGl0ICgnUmVuZGVyaW5nIENoZWNrYm94IHdpdGhvdXQgY3Jhc2hpbmcnLCAoKSA9PiB7XG4vLyAgICAgY29uc3QgcmVzdWx0ID0gcmVuZGVyZXIuY3JlYXRlKFxuLy8gICAgICAgPENoZWNrYm94XG4vLyAgICAgICAgIHZhbHVlPXtcIlRlc3QgQ2hlY2tib3hcIn1cbi8vICAgICAgICAgb25FdmVudD17ZSA9PiB7fX1cbi8vICAgICAgIC8+XG4vLyAgICAgKS50b0pTT04oKVxuLy8gICAgIGV4cGVjdChyZXN1bHQpLnRvTWF0Y2hTbmFwc2hvdCgpXG4vLyAgIH0pXG4vLyB9KVxuIl19

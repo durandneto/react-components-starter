@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./client.js"></script>
+</head>
+<body>
+  <h1>AliceDB</h1>
+  <p>npm install <b>alicedb</b></p>
+  <p><b>AliceDBClient and AliceDBServer</b></p>
+  <div style="display: flex;">
+    <div style="width: 40%;">
+      <h3>Controls</h3>
+      <h4>Create Table</h4>
+      <div style="border: solid 1px silver;padding: 3%">
+        <input type="text" id="iCreateTable" disabled>
+        <button id="bCreateTable" disabled>Create Table</button>
+      </div>
+      <h4>Create Users</h4>
+      <div style="border: solid 1px silver;padding: 3%">
+        <input type="text" id="iCreateUser" disabled>
+        <button id="bCreateUser" disabled>Add New User</button>
+      </div>
+    </div>
+  <div style="width:100%; margin-left: 5%;">
+    <h4>Load Server Table</h4>
+    <div style="width:90%;border: solid 1px silver;padding: 3%;">
+      <input type="text" id="iLoadTable" disabled>
+      <button id="bLoadTable" disabled>Load Table</button>
+    </div>
+    <h3>Rows</h3>
+    <div style="width:90%;border: solid 1px silver;padding: 3%;">
+      <div id="root" />
+    </div>
+  </div>
+</div>
+  <script>
+
+    var divRoot = document.getElementById('root')
+
+    var bCreateUser = document.getElementById('bCreateUser')
+    var iCreateUser = document.getElementById('iCreateUser')
+
+    var bLoadTable = document.getElementById('bLoadTable')
+    var iLoadTable = document.getElementById('iLoadTable')
+
+    var bCreateTable = document.getElementById('bCreateTable')
+    var iCreateTable = document.getElementById('iCreateTable')
+
+    var tables = []
+    var indices = []
+    var currentTable = ''
+
+    function renderTable() {
+      divRoot.innerHTML = ''
+      var divContainer = document.createElement('div')
+
+      var table = tables[indices[currentTable]]
+      var divTitle = document.createElement('h1')
+      divTitle.innerHTML = `Table: [${table.name}] (Rows ${table.users.length || 0})`
+      divContainer.appendChild(divTitle)
+
+      for (const user of table.users) {
+        var divUser = document.createElement('div')
+        divUser.innerHTML = ` Name: <b>${user.name}</b><br /> ID: <b>${user.uuid}</b><br /><br />`
+        divContainer.appendChild(divUser)
+      }
+
+      divRoot.appendChild(divContainer)
+    }
+
+    function disabledAll(){
+      bCreateUser.disabled = true
+      iCreateUser.disabled = true
+
+      bLoadTable.disabled = true
+      iLoadTable.disabled = true
+
+      bCreateTable.disabled = true
+      iCreateTable.disabled = true
+    }
+
+    function enableAll(){
+      bCreateUser.disabled = false
+      iCreateUser.disabled = false
+
+      bLoadTable.disabled = false
+      iLoadTable.disabled = false
+
+      bCreateTable.disabled = false
+      iCreateTable.disabled = false
+    }
+
+    const AliceDB = new AliceDBClient()
+
+    AliceDB.connect({
+      HTTP_PORT: 2706,
+      ADDRESS: '127.0.0.1'
+    }).then(db => {
+      enableAll()
+
+      const crateTable = () => {
+        disabledAll()
+        if (!indices[currentTable]) {
+          currentTable = iCreateTable.value
+          db.createTable(currentTable)
+            .then(tableName => {
+              indices[currentTable] = indices.length
+              tables.push({
+                name: currentTable,
+                users: []
+              })
+              enableAll()
+              renderTable()
+            })
+            .catch( error => {
+              console.log('error', error)
+              enableAll()
+            })
+        }
+      }
+
+      const addUser = () => {
+        disabledAll()
+        db.use(currentTable)
+          .add({ name: iCreateUser.value })
+          .then(row => {
+            console.log('new row added ', row, indices[currentTable])
+            tables[indices[currentTable]].users.push(row)
+            enableAll()
+            renderTable()
+          })
+          .catch( error => {
+            console.log('error', error)
+            enableAll()
+          })
+      }
+
+      const loadTable = () => {
+        disabledAll()
+        currentTable = iLoadTable.value
+        db.use(currentTable)
+          .getAll()
+          .then(rows => {
+            if (indices[currentTable]) {
+              delete tables[indices[currentTable]]
+            } else {
+              indices[currentTable] = indices.length
+            }
+            tables[indices[currentTable]] = {
+              name: currentTable,
+              users: rows
+            }
+            enableAll()
+            renderTable()
+          })
+          .catch( error => {
+            console.log('error', error)
+            divRoot.innerHTML = '<br />Table Not found!'
+            enableAll()
+          })
+      }
+
+      bCreateUser.addEventListener('click',addUser)
+      bCreateTable.addEventListener('click',crateTable)
+      bLoadTable.addEventListener('click',loadTable)
+    })
+  </script>
+</body>
+</html>

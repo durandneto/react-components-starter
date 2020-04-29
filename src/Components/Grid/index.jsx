@@ -51,7 +51,7 @@ const StyledContainer = styled.div`
     `}
 `
 
-const Container = props => <StyledContainer {...props}>{props.children}</StyledContainer>
+export const Container = props => <StyledContainer {...props}>{props.children}</StyledContainer>
 
 Container.propTypes = {
     alignCenter: PropTypes.bool,
@@ -84,6 +84,11 @@ const StyledRow = styled(StyledContainer)`
     margin: initial;
     width: 100%;
     position: relative;
+
+    ${({ wrap }) => wrap && `
+        flex-flow: wrap;
+    `}
+
     ${({ margin }) => margin && `
         margin: 6px 0;
     `}
@@ -95,6 +100,7 @@ const StyledRow = styled(StyledContainer)`
     ${({ autoColumn }) => autoColumn && `
         @media only screen and (max-width: 768px) {
             flex-direction: column;
+            align-items: flex-start;
         }
     `}
 
@@ -113,7 +119,17 @@ const StyledColumn = styled(StyledContainer)`
     `}
 
     ${({ noPadding }) => noPadding && `
-        padding: 6px 0px;
+        padding: 0px;
+    `}
+
+    ${({ marginRight }) => marginRight && `
+        margin-right: 6px ;
+    `}
+
+    ${({ autoColumnFullWidth }) => autoColumnFullWidth && `
+        @media only screen and (max-width: 768px) {
+            width: 100%;
+        }
     `}
 `
 

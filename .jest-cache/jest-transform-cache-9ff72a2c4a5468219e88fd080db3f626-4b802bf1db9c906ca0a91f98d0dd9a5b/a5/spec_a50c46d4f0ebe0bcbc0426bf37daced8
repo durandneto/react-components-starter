@@ -1,0 +1,22 @@
+bc3e671d1a76f9b7d364cda730267caf
+"use strict";
+
+var _react = _interopRequireDefault(require("react"));
+
+var _reactTestRenderer = _interopRequireDefault(require("react-test-renderer"));
+
+var _ = _interopRequireDefault(require("."));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+describe('Checkbox', function () {
+  it('Rendering Checkbox without crashing', function () {
+    var result = _reactTestRenderer["default"].create( /*#__PURE__*/_react["default"].createElement(_["default"], {
+      value: "Test Checkbox",
+      onEvent: function onEvent(e) {}
+    })).toJSON();
+
+    expect(result).toMatchSnapshot();
+  });
+});
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi5zcGVjLmpzIl0sIm5hbWVzIjpbImRlc2NyaWJlIiwiaXQiLCJyZXN1bHQiLCJyZW5kZXJlciIsImNyZWF0ZSIsImUiLCJ0b0pTT04iLCJleHBlY3QiLCJ0b01hdGNoU25hcHNob3QiXSwibWFwcGluZ3MiOiI7O0FBQUE7O0FBQ0E7O0FBQ0E7Ozs7QUFFQUEsUUFBUSxDQUFDLFVBQUQsRUFBYSxZQUFNO0FBQ3pCQyxFQUFBQSxFQUFFLENBQUUscUNBQUYsRUFBeUMsWUFBTTtBQUMvQyxRQUFNQyxNQUFNLEdBQUdDLDhCQUFTQyxNQUFULGVBQ2IsZ0NBQUMsWUFBRDtBQUNFLE1BQUEsS0FBSyxFQUFFLGVBRFQ7QUFFRSxNQUFBLE9BQU8sRUFBRSxpQkFBQUMsQ0FBQyxFQUFJLENBQUU7QUFGbEIsTUFEYSxFQUtiQyxNQUxhLEVBQWY7O0FBTUFDLElBQUFBLE1BQU0sQ0FBQ0wsTUFBRCxDQUFOLENBQWVNLGVBQWY7QUFDRCxHQVJDLENBQUY7QUFTRCxDQVZPLENBQVIiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgUmVhY3QgZnJvbSAncmVhY3QnXG5pbXBvcnQgcmVuZGVyZXIgZnJvbSAncmVhY3QtdGVzdC1yZW5kZXJlcidcbmltcG9ydCBDaGVja2JveCBmcm9tICcuJ1xuXG5kZXNjcmliZSgnQ2hlY2tib3gnLCAoKSA9PiB7XG4gIGl0ICgnUmVuZGVyaW5nIENoZWNrYm94IHdpdGhvdXQgY3Jhc2hpbmcnLCAoKSA9PiB7XG4gICAgY29uc3QgcmVzdWx0ID0gcmVuZGVyZXIuY3JlYXRlKFxuICAgICAgPENoZWNrYm94XG4gICAgICAgIHZhbHVlPXtcIlRlc3QgQ2hlY2tib3hcIn1cbiAgICAgICAgb25FdmVudD17ZSA9PiB7fX1cbiAgICAgIC8+XG4gICAgKS50b0pTT04oKVxuICAgIGV4cGVjdChyZXN1bHQpLnRvTWF0Y2hTbmFwc2hvdCgpXG4gIH0pXG59KVxuIl19

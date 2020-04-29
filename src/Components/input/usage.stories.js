@@ -3,6 +3,7 @@ import { storiesOf } from "@storybook/react";
 import Container, { Row, Column } from '../Grid'
 import HeaderFont from '../Typography/Header'
 import Button from '../Button'
+import Checkbox from '../Checkbox'
 import Input from ".";
 
 
@@ -46,6 +47,30 @@ storiesOf("Components|Input/Usage/Login", module)
             onEvent={e => {
             console.log(e)
           }} />
+        </Column>
+      </Row>
+      <Row>
+        <Column>
+          <Checkbox
+            label={"Click here to receive notifications"}
+            data={{ gtmData: "aiao23987b7998g28", user: {id: 37}}}
+            value={1}
+            name={"input-checkbox-gtm"}
+            id={"input-checkbox-gtm-1"}
+            onEvent={(event) => console.log(event)}
+          />
+        </Column>
+      </Row>
+      <Row>
+        <Column>
+          <Checkbox
+            label={"I Agreed"}
+            data={{ gtmData: "aiao23987b7998g28", user: {id: 37}}}
+            value={1}
+            name={"input-checkbox-gtm"}
+            id={"input-checkbox-gtm-1"}
+            onEvent={(event) => console.log(event)}
+          />
         </Column>
       </Row>
       <Row >
@@ -101,6 +126,32 @@ storiesOf("Components|Input/Usage/Login", module)
             onEvent={e => {
             console.log(e)
           }} />
+        </Column>
+      </Row>
+      <Row>
+        <Column>
+          <Checkbox
+            label={"Click here to receive notifications"}
+            data={{ gtmData: "aiao23987b7998g28", user: {id: 37}}}
+            value={1}
+            name={"input-checkbox-gtm"}
+            id={"input-checkbox-gtm-1"}
+            disabled
+            onEvent={(event) => console.log(event)}
+          />
+        </Column>
+      </Row>
+      <Row>
+        <Column>
+          <Checkbox
+            label={"I Agreed"}
+            data={{ gtmData: "aiao23987b7998g28", user: {id: 37}}}
+            value={1}
+            name={"input-checkbox-gtm"}
+            id={"input-checkbox-gtm-1"}
+            disabled
+            onEvent={(event) => console.log(event)}
+          />
         </Column>
       </Row>
       <Row >
@@ -159,6 +210,31 @@ storiesOf("Components|Input/Usage/Login", module)
           }} />
         </Column>
       </Row>
+      <Row>
+        <Column>
+          <Checkbox
+            label={"Click here to receive notifications"}
+            data={{ gtmData: "aiao23987b7998g28", user: {id: 37}}}
+            value={1}
+            name={"input-checkbox-gtm"}
+            id={"input-checkbox-gtm-1"}
+            onEvent={(event) => console.log(event)}
+          />
+        </Column>
+      </Row>
+      <Row>
+        <Column>
+          <Checkbox
+            label={"I Agreed"}
+            data={{ gtmData: "aiao23987b7998g28", user: {id: 37}}}
+            value={1}
+            name={"input-checkbox-gtm"}
+            id={"input-checkbox-gtm-1"}
+            onEvent={(event) => console.log(event)}
+            loading
+          />
+        </Column>
+      </Row>
       <Row >
         <Column full>
         <Button
@@ -211,6 +287,32 @@ storiesOf("Components|Input/Usage/Login", module)
             onEvent={e => {
             console.log(e)
           }} />
+        </Column>
+      </Row>
+      <Row>
+        <Column>
+          <Checkbox
+            label={"Click here to receive notifications"}
+            data={{ gtmData: "aiao23987b7998g28", user: {id: 37}}}
+            value={1}
+            name={"input-checkbox-gtm"}
+            id={"input-checkbox-gtm-1"}
+            onEvent={(event) => console.log(event)}
+            checked
+          />
+        </Column>
+      </Row>
+      <Row>
+        <Column>
+          <Checkbox
+            label={"I Agreed"}
+            data={{ gtmData: "aiao23987b7998g28", user: {id: 37}}}
+            value={1}
+            name={"input-checkbox-gtm"}
+            id={"input-checkbox-gtm-1"}
+            onEvent={(event) => console.log(event)}
+            error
+          />
         </Column>
       </Row>
       <Row >

@@ -14,13 +14,14 @@ from "./styles"
 
 const InputCheckbox = props => {
   const [checked, setChecked] = useState(props.checked || false)
+  const [error, setError] = useState(props.error || false)
 
   return (
     <StyledContainer
       id={props.id}
       checked={checked}
       disabled={props.disabled || props.loading}
-      error={props.error}
+      error={error}
       loading={props.loading}
       success={props.success}
       onMouseEnter={ e => {
@@ -33,7 +34,7 @@ const InputCheckbox = props => {
               checked,
             },
             state: {
-              error: props.error,
+              error: error,
               loading: props.loading,
               success: props.success,
               disabled: props.disabled,
@@ -42,6 +43,7 @@ const InputCheckbox = props => {
         })
       }}
       onClick={() => {
+        setError(false)
         !props.loading && !props.disabled && props.onEvent({
           type: "onClick",
           origin: "Checkbox",
@@ -51,7 +53,7 @@ const InputCheckbox = props => {
               checked: !checked,
             },
             state: {
-              error: props.error,
+              error: error,
               loading: props.loading,
               success: props.success,
               disabled: props.disabled,
@@ -66,12 +68,11 @@ const InputCheckbox = props => {
           <StyledCheckbox
             checked={checked}
             loading={props.loading}
-            error={props.error}
+            error={error}
             success={props.success}
           >
             <StyledInput
               name={props.name}
-              id={props.id}
               checked={checked}
               onChange={() => {}}
               type="checkbox" />

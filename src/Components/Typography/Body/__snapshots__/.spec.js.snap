@@ -3,10 +3,8 @@
 exports[`Typography Rendering Font Components without crashing 1`] = `
 .c0 {
   font-size: 14px;
-  line-height: 18px;
   color: #1A237E;
   font-size: 18px;
-  line-height: 22px;
 }
 
 <span
