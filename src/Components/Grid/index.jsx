@@ -114,9 +114,7 @@ const StyledColumn = styled(StyledContainer)`
     padding: 6px;
     width: fit-content;
     position: relative;
-    ${({ full }) => full && `
-        width: 100%;
-    `}
+
 
     ${({ noPadding }) => noPadding && `
         padding: 0px;
@@ -131,6 +129,9 @@ const StyledColumn = styled(StyledContainer)`
             width: 100%;
         }
     `}
+    ${({ full }) => full && `
+    width: 100%;
+`}
 `
 
 export const Column = props => <StyledColumn {...props}>{props.children}</StyledColumn>

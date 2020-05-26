@@ -57,7 +57,7 @@ const RabioButton = props => {
 
       >
         <Row>
-          <Column noPadding marginRight>
+          <Column>
             <input
               ref={checkbox}
               type="radio"
@@ -69,7 +69,7 @@ const RabioButton = props => {
           </Column>
           {
             props.label && (
-              <Column noPadding>
+              <Column>
                 {
                   props.label
                 }

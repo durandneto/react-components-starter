@@ -25,8 +25,7 @@ const Form = props =>
                     id: 1
                 }
                 }}
-                disabled={false}
-                loading={false}
+                {...props.controls.name}
                 onEvent={props.onEvent}
                 placeholder="Input"
                 testMessage=""
@@ -46,36 +45,31 @@ const Form = props =>
                     id: 1
                 }
                 }}
-                disabled={false}
-                loading={false}
                 onEvent={props.onEvent}
                 placeholder="Type your E-mail"
                 testMessage="E-mail inválido."
                 test={/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/}
                 type="text"
                 value=""
+                {...props.controls.email}
             />
             </Column>
         </Row>
         <Row>
             <Column>
                 <Checkbox
-                    checked={false}
                     data={{
                     gtmData: 'aiao23987b7998g28',
                     user: {
                         id: 37
                     }
                     }}
-                    disabled={false}
-                    error={false}
                     id="input-checkbox-gtm-1"
                     label="Subscribe no Canal"
-                    loading={false}
                     name="input-checkbox-gtm"
                     onEvent={props.onEvent}
-                    success={false}
                     value={1}
+                    {...props.controls.subscribe}
                 />
             </Column>
         </Row>
@@ -93,6 +87,7 @@ const Form = props =>
                     label="Eu sou menor do que 18"
                     onEvent={props.onEvent}
                     value="18-"
+                    {...props.controls.age}
                 />
             </Column>
             <Column noPadding>
@@ -105,6 +100,7 @@ const Form = props =>
                     label="Eu sou maior do que 18"
                     onEvent={props.onEvent}
                     value="18+"
+                    {...props.controls.age}
                 />
             </Column>
         </Row>
@@ -119,6 +115,8 @@ const Form = props =>
                     label="Enviar"
                     onEvent={props.onEvent}
                     success
+                    {...props.controls.cta}
+
                 />
             </Column>
         </Row>

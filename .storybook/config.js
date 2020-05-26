@@ -1,5 +1,6 @@
 import { configure, addDecorator } from "@storybook/react";
 import { withInfo } from "@storybook/addon-info";
+import { withKnobs } from "@storybook/addon-knobs/react";
 import * as React from "react";
 import { createGlobalStyle } from 'styled-components'
 
@@ -28,5 +29,6 @@ const withGlobal = cb => (
 
 addDecorator(withInfo());
 addDecorator(withGlobal);
+addDecorator(withKnobs);
 
 configure(loadStories, module);

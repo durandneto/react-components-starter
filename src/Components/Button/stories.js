@@ -3,16 +3,24 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import Container, { Row, Column } from '../Grid'
 import HeaderText from '../Typography/Header'
+import { object, text } from "@storybook/addon-knobs";
 
 import Button from '.'
 
-storiesOf('Components|Buttons', module)
+const label = 'Styles';
+const defaultValue = {
+  backgroundColor: 'red',
+};
+const groupId = 'GROUP-ID1';
 
+
+const stories = storiesOf('Components|Buttons', module)
+// stories.addDecorator(withKnobs)
   .add('Default', () => (
     <Container>
         <Row>
             <Column>
-                <HeaderText h1 label='Button Default' />
+                <HeaderText h1 label={text("title", "Buttons")} />
             </Column>
         </Row>
         <Row>
@@ -21,7 +29,7 @@ storiesOf('Components|Buttons', module)
                     onEvent={ e => {
                         console.log(e)
                     }}
-                    data={{user:{id:1}}}
+                    data={object(label, defaultValue, groupId)}
                     label={"Default with data"} />
             </Column>
         </Row>

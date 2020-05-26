@@ -24,4 +24,10 @@ export default styled.span`
         font-size: 18px;
     `}
 
+    ${({ nowrap }) => nowrap && `
+        white-space: nowrap;
+    `}
+
+
+
 `
