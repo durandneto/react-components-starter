@@ -88,7 +88,7 @@ var GRSearchHeader = function GRSearchHeader(props) {
         props.onEvent({
           type: 'onDragStart',
           data: props.data,
-          id: tweet.id
+          tweet: tweet
         });
       }
     }, /*#__PURE__*/_react["default"].createElement(_Grid.Row, null, /*#__PURE__*/_react["default"].createElement(_Grid.Column, {

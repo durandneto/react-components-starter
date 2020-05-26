@@ -67,7 +67,7 @@ const GRSearchHeader = props => {
               props.onEvent({
                 type: 'onDragStart',
                 data: props.data,
-                id: tweet.id
+                tweet: tweet
               })
           }}>
             <Row>
