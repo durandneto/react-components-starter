@@ -10,7 +10,8 @@
   "scripts": {
     "start": "start-storybook -p 6083",
     "build-docs": "build-storybook -o docs",
-    "test": "jest"
+    "test": "jest",
+    "transpile": "babel --plugins inline-import-data-uri,@babel/plugin-proposal-class-properties src --copy-files --out-dir dist "
   },
   "eslintConfig": {
     "extends": "react-app"
