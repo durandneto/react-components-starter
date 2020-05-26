@@ -124,9 +124,10 @@ var TweetSaverTemplate = function TweetSaverTemplate(props) {
       props.onEvent({
         type: 'onDrop'
       });
-      setDragging(false);
-      var data = e.dataTransfer.getData("text");
-      document.getElementById("Drag2").appendChild(document.getElementById(data));
+      setDragging(false); // const data = e.dataTransfer.getData("text")
+      // document.getElementById("Drag2")
+      // .appendChild(document.getElementById(data))
+
       props.onEvent({
         type: 'onDragOver1'
       });

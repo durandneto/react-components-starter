@@ -71,9 +71,9 @@ const TweetSaverTemplate = props => {
             type: 'onDrop'
           })
           setDragging(false)
-          const data = e.dataTransfer.getData("text")
-          document.getElementById("Drag2")
-          .appendChild(document.getElementById(data))
+          // const data = e.dataTransfer.getData("text")
+          // document.getElementById("Drag2")
+          // .appendChild(document.getElementById(data))
           props.onEvent({
             type: 'onDragOver1'
           })
